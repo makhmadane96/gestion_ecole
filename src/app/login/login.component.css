@@ -1,3 +1,11 @@
 .blue{
     color: blue;
 }
+
+.rouge{
+    color: red;
+}
+
+.taille{
+    font-weight: bold;
+}

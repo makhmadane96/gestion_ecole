@@ -1,3 +1,40 @@
 <h1 class="blue">Institut superieur informatique</h1>
 
 <h1>{{nom}}</h1>
+
+
+<!--Interpolation-->
+<h2 [ngClass]="{'blue': age ==18 ,'taille' : age == 18 }">{{prenom}} : {{nom}}</h2>
+
+
+<!--Property Binding-->
+
+<input type="text" [value]="prenom">
+<br><br>
+
+<!--Event Binding-->
+
+<button (click)="bonjour()" >Clique moi</button>
+
+
+<!--Two way Binding-->
+
+<input type="text"  [(ngModel)]="prenom">
+
+<!--Directives Structural-->
+
+<p *ngIf="age >= 18">Majeur</p>
+
+<p *ngIf="age < 18">Mineur</p>
+
+
+<p *ngFor="let j of joueurs; let i = index; "  [ngStyle]="{'font-style': (age == 18) ? 'italic' : 'normal'}">
+   {{i+1}} : {{j}}
+</p>
+
+<div [ngSwitch]="age">
+    <p *ngSwitchCase="18"> dix huit</p>
+    <p *ngSwitchCase="10"> dix </p>
+    <p *ngSwitchDefault> Autre</p>
+  </div>
+
