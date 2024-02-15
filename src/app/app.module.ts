@@ -5,12 +5,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { StatistiqueComponent } from './statistique/statistique.component';
 import { FormsModule } from '@angular/forms';
+import { TriePipe } from './pipe/trie.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    StatistiqueComponent
+    StatistiqueComponent,
+    TriePipe,
   ],
   imports: [
     BrowserModule,

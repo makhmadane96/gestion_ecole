@@ -2,9 +2,10 @@
 
 <h1>{{nom}}</h1>
 
+<h1>{{birthdate |date:'dd/MM/yyyy   HH'}}</h1>
 
 <!--Interpolation-->
-<h2 [ngClass]="{'blue': age ==18 ,'taille' : age == 18 }">{{prenom}} : {{nom}}</h2>
+<h2 [ngClass]="{'blue': age ==18 ,'taille' : age == 18 }">{{prenom |uppercase  }} : {{nom}}</h2>
 
 
 <!--Property Binding-->
@@ -23,12 +24,14 @@
 
 <!--Directives Structural-->
 
+<button class="btn btn-danger">danger</button>
+
 <p *ngIf="age >= 18">Majeur</p>
 
 <p *ngIf="age < 18">Mineur</p>
 
 
-<p *ngFor="let j of joueurs; let i = index; "  [ngStyle]="{'font-style': (age == 18) ? 'italic' : 'normal'}">
+<p *ngFor="let j of joueurs | trie; let i = index; "  [ngStyle]="{'font-style': (age == 18) ? 'italic' : 'normal'}">
    {{i+1}} : {{j}}
 </p>
 
